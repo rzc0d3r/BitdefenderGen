@@ -8,10 +8,6 @@
 
 ![](../img/main_menu.png)
 
-1. Settings
-2. Do it, damn it!
-3. Exit
-
 * **Settings** - this is under the startup settings menu
 * **Do it, damn it!** - launches the program 
 * **Exit** - obviously closes the program
