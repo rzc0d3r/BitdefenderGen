@@ -6,7 +6,7 @@
 
 ---
   
-1. Run **main.py** or executable file in Console or use [MBCI](https://github.com/rzc0d3r/ESET-KeyGen/blob/main/wiki/MBCI-Inferface.md):
+1. Run **main.py** or executable file in Console or use [MBCI](MBCI-Inferface.md):
 ```
 python main.py --chrome
 ```
