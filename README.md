@@ -1,5 +1,5 @@
 # Bitdefender-Gen
-Bitdefender-Gen - generates accounts for Bitdefender antivirus with a XX-day license
+Bitdefender-Gen - generates accounts for Bitdefender products (Antivirus & VPN) with a XX-day license
 
 ![](img/project_preview.png)
 
@@ -31,7 +31,7 @@ Bitdefender-Gen - generates accounts for Bitdefender antivirus with a XX-day lic
 pip install -r requirements.txt
 ```
 
-## Preparing Bitdefender Antivirus
+## Preparing Bitdefender App
 Delete your current Bitdefender account
 
 ## How to use (Part 2)
