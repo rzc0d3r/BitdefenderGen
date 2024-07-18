@@ -4,17 +4,6 @@ Bitdefender-Gen - generates accounts for Bitdefender antivirus with a XX-day lic
 ![](img/project_preview.png)
 
 # How to use
-
-## Using GitHub Actions CI
-You can simply use the GitHub actions workflow given [here](https://github.com/rzc0d3r/ESET-KeyGen/blob/main/.github/workflows/eset.yml) in your GitHub repo.
-
-Make a fork of my project. Go to it.
-Then goto the **Actions** tab, choose **Generator** actions and then run the workflow.
-
-It will ask the number of accounts, keys to be generated.
-
-## Using your device
-
 ### Installing Browser
 #### Google Chrome (fully supports)
 
