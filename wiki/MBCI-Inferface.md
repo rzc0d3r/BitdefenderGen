@@ -8,9 +8,9 @@
 
 ![](../img/main_menu.png)
 
-* **Settings** - this is under the startup settings menu
-* **Do it, damn it!** - launches the program 
-* **Exit** - obviously closes the program
+1. **Settings** - this is under the startup settings menu
+2. **Do it, damn it!** - launches the program 
+3. **Exit** - obviously closes the program
 
 > To select the desired item, enter its number from the list after and press Enter.
 
@@ -32,6 +32,6 @@ Here you are greeted by a menu consisting items (they're all from [CommandLineAr
 
 #### Menu Demonstration
 
-!](../img/custom_settings_menu.png)
+![](../img/custom_settings_menu.png)
 
 ### After customization you should go back to the _Main Menu_ and click on _Do it, damn it!_
