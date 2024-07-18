@@ -18,7 +18,7 @@ BitdefenderGen_v1.0.0.0_win64.exe --chrome
 2. Wait until you will see the account data
 > This information will also be written to a file named "Today date - BITDEFENDER ACCOUNTS.txt"
 
-![Windows](../img/account_run.png)
+![](../img/account_run.png)
 
 ---
 
