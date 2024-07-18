@@ -1,2 +1,2 @@
-# Bitdefender-License-Generator
-Bitdefender-License-Generator - generates accounts for Bitdefender antivirus with a XX-day license
+# Bitdefender-Gen
+Bitdefender-Gen - generates accounts for Bitdefender antivirus with a XX-day license
