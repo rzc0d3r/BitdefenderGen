@@ -9,7 +9,9 @@
    ```
    > File name is unique for each version! Do not copy the above command. This is an example!
 
-2. Wait until you will see the account data
+2. Wait until you see in the console **Please solve reCAPTCHA!!!** then solve captcha!
+
+3. Wait until you will see the account data
    > This information will also be written to a file named "Today date - BITDEFENDER ACCOUNTS.txt"
 
    ![](../img/account_run.png)
@@ -19,13 +21,14 @@
 ## 2. Generation using your email provider (Totally manual method, but hyper stable)
   
 1. Run **main.py** or executable file in Console or use [MBCI](MBCI-Inferface.md):
-```
-python main.py --chrome
-```
-```
-BitdefenderGen_v1.0.0.0_win64.exe --chrome
-```
-> File name is unique for each version! Do not copy the above command. This is an example!
+   ```
+   python main.py --chrome
+   ```
+   ```
+   BitdefenderGen_v1.0.0.0_win64.exe --chrome
+   ```
+   > File name is unique for each version! Do not copy the above command. This is an example!
+2. Wait until you see in the console **Please solve reCAPTCHA!!!** then solve captcha!
 
-2. Wait until you will see the account data
-> This information will also be written to a file named "Today date - BITDEFENDER ACCOUNTS.txt"
+3. Wait until you will see the account data
+   > This information will also be written to a file named "Today date - BITDEFENDER ACCOUNTS.txt"
