@@ -12,7 +12,7 @@
 2. Wait until you will see the account data
    > This information will also be written to a file named "Today date - BITDEFENDER ACCOUNTS.txt"
 
-![](../img/account_run.png)
+   ![](../img/account_run.png)
 
 ---
 
