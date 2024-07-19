@@ -1,4 +1,4 @@
-## Generation using implemented email APIs (Auto method, but less stable)
+## Generation using implemented email APIs
   
 1. Run **main.py** or executable file in Console or use [MBCI](MBCI-Inferface.md):
    ```
@@ -10,15 +10,20 @@
    > File name is unique for each version! Do not copy the above command. This is an example!
 
 2. Wait until you see in the console **Please solve reCAPTCHA!!!** then solve captcha!
+   > Sometimes the captcha can be solved automatically!
 
 3. Wait until you will see the account data
    > This information will also be written to a file named "Today date - BITDEFENDER ACCOUNTS.txt"
 
    ![](../img/account_run.png)
 
+   #### Also, if you generate accounts frequently, the site may require email confirmation (program will do this automatically!)
+
+   ![](../img/account_run_token.png)
+
 ---
 
-## 2. Generation using your email provider (Totally manual method, but hyper stable)
+## 2. Generation using your email provider
   
 1. Run **main.py** or executable file in Console or use [MBCI](MBCI-Inferface.md):
    ```
@@ -28,7 +33,15 @@
    BitdefenderGen_v1.0.0.0_win64.exe --chrome
    ```
    > File name is unique for each version! Do not copy the above command. This is an example!
-2. Wait until you see in the console **Please solve reCAPTCHA!!!** then solve captcha!
-
-3. Wait until you will see the account data
+2. Enter the email address to which you have access.
+3. Wait until you see in the console **Please solve reCAPTCHA!!!** then solve captcha!
+   > Sometimes the captcha can be solved automatically!
+4. Wait until you will see the account data
    > This information will also be written to a file named "Today date - BITDEFENDER ACCOUNTS.txt"
+  
+   ![](../img/custom_email_api_account_run.png)
+
+   #### Also, if you generate accounts frequently, the site may require email confirmation
+   3.1. After the console asks you to enter the activation token, paste it from the email and press Enter (**nothing further is required from you!**)
+
+   ![](../img/custom_email_api_account_run_token.png)
