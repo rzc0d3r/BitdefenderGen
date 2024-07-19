@@ -14,7 +14,7 @@
 
 > To select the desired item, enter its number from the list after and press Enter.
 
-> The default setting is ```--chrome --key --email-api developermail``` so that when you start the program you can immediately select **Do it, damn it!** and you will generate your Bitdefener account through the chrome browser
+> The default setting is ```--chrome --email-api developermail``` so that when you start the program you can immediately select **Do it, damn it!** and you will generate your Bitdefener account through the chrome browser
 
 ---
 
