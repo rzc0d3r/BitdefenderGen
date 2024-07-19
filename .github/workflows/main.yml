@@ -1,0 +1,106 @@
+name: Compile the project
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'File version (Without spaces and brackets) (Eg: 1.1.0.0, 1.1.0.0-pre)'
+        required: true
+      tagname:
+        description: 'TagName release (Without spaces and brackets) (Eg: 1.1.0.0-test)'
+        required: true
+      release_name:
+        description: 'Release name'
+        required: true
+jobs:
+  macOS_Intel:
+    runs-on: macos-13
+    steps:
+      - name: 'Checkout Repo'
+        uses: actions/checkout@v4
+
+      - name: Compile
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller
+          pyinstaller --onefile --clean main.py
+          chmod a+x ./dist/main
+          mv ./dist/main "./BitdefenerGen_v${{ github.event.inputs.version }}_macos_amd64"
+
+      - name: Release
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            BitdefenerGen_v${{ github.event.inputs.version }}_macos_amd64
+          name: ${{ github.event.inputs.release_name }}
+          tag_name: v${{ github.event.inputs.tagname }}
+          draft: false
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+  macOS_Arm:
+    runs-on: macos-latest
+    steps:
+      - name: 'Checkout Repo'
+        uses: actions/checkout@v4
+
+      - name: Compile
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller
+          pyinstaller --onefile --clean main.py
+          chmod a+x ./dist/main
+          mv ./dist/main "./BitdefenerGen_v${{ github.event.inputs.version }}_macos_arm64"
+
+      - name: Release
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            BitdefenerGen_v${{ github.event.inputs.version }}_macos_arm64
+          name: ${{ github.event.inputs.release_name }}
+          tag_name: v${{ github.event.inputs.tagname }}
+          draft: false
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+  Windows:
+    runs-on: windows-latest
+    steps:
+      - name: 'Checkout Repo'
+        uses: actions/checkout@v4
+
+      - name: Compile (based on Python 3.8.0 x32)
+        run: |
+          mkdir legacy
+          cd legacy
+          Invoke-WebRequest -Uri "https://github.com/rzc0d3r/ESET-KeyGen/releases/download/python380-portable-win32/python-v3.8.0-portable_win32.zip" -OutFile "python-v3.8.0-portable_win32.zip"
+          Expand-Archive -Path "python-v3.8.0-portable_win32.zip" -DestinationPath .
+          .\python.exe -m pip install pyinstaller --no-warn-script-location
+          .\python.exe -m pip install -r ../requirements.txt --no-warn-script-location
+          Scripts/pyinstaller.exe --onefile --clean ../main.py
+          Move-Item -Path .\dist\main.exe -Destination ".\BitdefenerGen_v${{ github.event.inputs.version }}_win32.exe"
+          cd ..
+
+      - name: Compile (based on Python x64)
+        run: |
+          pip install -r requirements.txt
+          pip install pyinstaller
+          pyinstaller --onefile --clean main.py
+          Move-Item -Path .\dist\main.exe -Destination ".\BitdefenerGen_v${{ github.event.inputs.version }}_win64.exe"
+
+      - name: Release
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            legacy/BitdefenerGen_v${{ github.event.inputs.version }}_win32.exe
+            BitdefenerGen_v${{ github.event.inputs.version }}_win64.exe
+          name: ${{ github.event.inputs.release_name }}
+          tag_name: v${{ github.event.inputs.tagname }}
+          draft: false
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
