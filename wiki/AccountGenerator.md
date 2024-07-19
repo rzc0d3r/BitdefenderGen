@@ -17,7 +17,9 @@
 
    ![](../img/account_run.png)
 
-   #### Also, if you generate accounts frequently, the site may require email confirmation (program will do this automatically!)
+   ---
+
+   ## Also, if you generate accounts frequently, the site may require email confirmation (program will do this automatically!)
 
    ![](../img/account_run_token.png)
 
@@ -40,8 +42,18 @@
    > This information will also be written to a file named "Today date - BITDEFENDER ACCOUNTS.txt"
   
    ![](../img/custom_email_api_account_run.png)
+   
+   ---
 
-   #### Also, if you generate accounts frequently, the site may require email confirmation
-   3.1. After the console asks you to enter the activation token, paste it from the email and press Enter (**nothing further is required from you!**)
+   ## Also, if you generate accounts frequently, the site may require email confirmation
+   3.1. After some time in the console you will see the message **Enter the link to activate your account, it will come to the email address you provide**, here you need to go to your email and find mail in inbox (**you will have to wait**)
 
+   **FROM: no-reply@info.bitdefender.com**
+
+   **SUBJECT: Confirm email address**
+   
+   ![](../img/activated_href.png)
+
+   3.2. Then open that email and copy the link that is in the button (right click on the button, copy link address) and paste it into the console. If you have done everything correctly, the generation will complete successfully!
+   
    ![](../img/custom_email_api_account_run_token.png)
