@@ -1,5 +1,5 @@
 # BitdefenderGen
-BitdefenderGen - generates accounts for Bitdefender products (Antivirus & VPN) with a 90-day license
+BitdefenderGen - Generates accounts for Bitdefender products (Antivirus & VPN) with a 90-day license
 
 ![](img/project_preview.png)
 
