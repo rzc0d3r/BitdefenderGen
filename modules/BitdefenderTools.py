@@ -2,8 +2,6 @@ from .EmailAPIs import *
 
 import colorama
 import platform
-import string
-import random
 import time
 import sys
 
@@ -19,7 +17,7 @@ class BitdefenderOPT(object):
         uCE = untilConditionExecute
 
         console_log('\n[FreeTS-Ukraine2022-OPT] Page loading...', INFO)
-        if isinstance(self.email_obj, (Hi2inAPI, TenMinuteMailAPI, TempMailAPI, GuerRillaMailAPI)):
+        if isinstance(self.email_obj, (TenMinuteMailAPI, GuerRillaMailAPI, MailTickingAPI)):
             self.driver.switch_to.new_window('Bitdefender')
             self.window_handle = self.driver.current_window_handle
         self.driver.get('https://www.bitdefender.com/media/html/consumer/new/Free-TS-Ukraine2022-opt/')
@@ -53,7 +51,7 @@ class BitdefenderOPT(object):
         uCE(self.driver, f'return {GET_EBID}("first_name_input") != null')
         console_log('[Register] Page is loaded!\n', OK)
         console_log('Data filling...', INFO)
-        exec_js(f'return {GET_EBID}("first_name_input")').send_keys(''.join([random.choice(string.ascii_letters) for _ in range(random.randint(10, 20))]))
+        exec_js(f'return {GET_EBID}("first_name_input")').send_keys(dataGenerator(10, only_letters=True))
         exec_js(f'return {GET_EBID}("password_strong_input")').send_keys(self.bitdefender_password)
         exec_js(f'{GET_EBID}("signup-terms-checkbox").click()')
         exec_js(f'{GET_EBID}("submit-create").click()')
@@ -80,7 +78,7 @@ class BitdefenderOPT(object):
             token = parseToken(self.email_obj, max_iter=100, delay=3)
         else:
             console_log(f'\n[{self.email_obj.class_name}] Bitdefender-Token interception...', INFO)
-            if isinstance(self.email_obj, (Hi2inAPI, TenMinuteMailAPI, TempMailAPI, GuerRillaMailAPI)):
+            if isinstance(self.email_obj, (TenMinuteMailAPI, GuerRillaMailAPI, MailTickingAPI)):
                 token = parseToken(self.email_obj, self.driver, max_iter=100, delay=3)
                 self.driver.switch_to.window(self.window_handle)
             else:
