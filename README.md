@@ -1,6 +1,9 @@
 # BitdefenderGen
 BitdefenderGen - Generates accounts for Bitdefender products (Antivirus & VPN) with a 90-day license
 
+# Support for this project has been stopped!
+# I advise to switch to ESET products. Also try this [ESET KeyGen](https://github.com/rzc0d3r/ESET-KeyGen) for them
+
 ![](img/project_preview.png)
 
 # How to use
